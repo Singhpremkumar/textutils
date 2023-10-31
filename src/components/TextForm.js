@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function TextForm(props) {
-    const {showAlert, Mode, mode} = props
+    const { showAlert, Mode, mode } = props
 
 
     const handleUpClick = () => {
@@ -34,10 +34,10 @@ export default function TextForm(props) {
     const [text, setText] = useState('');
     return (
         <>
-            <div className="container" style={{color:Mode==='dark'?'white':'black'}}>
+            <div className="container" style={{ color: Mode === 'dark' ? 'white' : 'black' }}>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: Mode==='dark'?'grey':'white'}} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: Mode === 'dark' ? 'grey' : 'white' }} id="myBox" rows="8"></textarea>
                 </div>
                 <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
                 <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to Lowercase</button>
@@ -46,9 +46,9 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove Extra Space</button>
 
             </div>
-            <div className="container my-3" style={{color:mode==='dark'?'white':'black'}}>
+            <div className="container my-3" style={{ color: mode === 'dark' ? 'white' : 'black' }}>
                 <h2>Your Text Summary</h2>
-                <p>{text.split(" ").length-1} words and {text.length} characters</p>
+                <p>{text.split(" ").length - 1} words and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} Minutes Read</p>
                 <h2>Preview</h2>
                 <p>{text}</p>
